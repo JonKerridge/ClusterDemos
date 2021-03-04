@@ -13,10 +13,8 @@ import groovyParallelPatterns.terminals.Emit
 import groovyParallelPatterns.*
  
 import java.awt.*
+ 
 
- 
-//usage runDemo mandelbrot\scripts RunMadelbrotLine resultsFile workers iterations width height delta
- 
 int workers
 int maxIterations
 int width                  //1400   700        350

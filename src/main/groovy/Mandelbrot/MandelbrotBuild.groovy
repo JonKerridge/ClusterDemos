@@ -4,7 +4,7 @@ import gppBuilder.GPPbuilder
 import gppClusterBuilder.CGPPbuilder
 
 def builder = new GPPbuilder()
-String fileRoot = "./"
+String fileRoot = "./scripts/"
 
-//builder.runBuilder("${fileRoot}MandelbrotGUI")
+builder.runBuilder("${fileRoot}MandelbrotGUI")
 builder.runBuilder("${fileRoot}MandelbrotNoGUI")

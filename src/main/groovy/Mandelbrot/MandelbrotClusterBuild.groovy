@@ -3,11 +3,11 @@ package Mandelbrot
 import gppClusterBuilder.CGPPbuilder
 
 def builder = new CGPPbuilder()
-String fileRoot = "./"
+String fileRoot = "./scripts/"
 
 builder.runClusterBuilder("${fileRoot}ClusterMandelbrot1")
 //builder.runClusterBuilder("${fileRoot}ClusterMandelbrot2")
-//builder.runClusterBuilder("${fileRoot}ClusterGUIMandelbrot1")
+builder.runClusterBuilder("${fileRoot}ClusterGUIMandelbrot1")
 //builder.runClusterBuilder("${fileRoot}EvaluateMandelbrot_152_1")
 //builder.runClusterBuilder("${fileRoot}EvaluateMandelbrot_152_2")
 //builder.runClusterBuilder("${fileRoot}EvaluateMandelbrot_152_3")
