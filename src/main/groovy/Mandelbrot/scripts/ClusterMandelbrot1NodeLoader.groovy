@@ -1,4 +1,4 @@
-package Mandelbrot
+package Mandelbrot.scripts
 import jcsp.lang.*
 import groovyJCSP.*
 import jcsp.net2.*

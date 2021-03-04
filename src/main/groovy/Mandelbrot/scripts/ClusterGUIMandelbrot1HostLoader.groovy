@@ -1,11 +1,11 @@
-package Mandelbrot
+package Mandelbrot.scripts
 import jcsp.lang.*
 import groovyJCSP.*
 import jcsp.net2.*
 import jcsp.net2.mobile.*
 import jcsp.net2.tcpip.*
 import gppClusterBuilder.*
-class ClusterMandelbrot1HostLoader implements LoaderConstants{
+class ClusterGUIMandelbrot1HostLoader implements LoaderConstants{
 static void main(String[] args) {
 int nodes = 1
 // create node and net input channel used by NodeLoaders
@@ -37,7 +37,7 @@ toNodes[n].write(acknowledgeNodeIPRead)
 // now send the built Node process to each Node - name modified by builder
 //@nodeProcess
 for ( n in 0 ..< nodes){
-toNodes[n].write(new ClusterMandelbrot1NodeProcess(
+toNodes[n].write(new ClusterGUIMandelbrot1NodeProcess(
     hostIP: hostIP,
     nodeIP: nodeIPs[n],
     toHostLocation: fromNodes.getLocation()
@@ -56,7 +56,7 @@ toNodes[n].write(startNodeProcess)
 long processStart = System.currentTimeMillis()
 // builder modifies the name of the host process
 //@hostProcess
-new PAR([new ClusterMandelbrot1HostProcess(
+new PAR([new ClusterGUIMandelbrot1HostProcess(
 hostIP: hostIP,
 nodeIPs: nodeIPs,
 nodes2host: fromNodes,

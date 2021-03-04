@@ -1,5 +1,7 @@
-package Mandelbrot
+package Mandelbrot.scripts
 
+import Mandelbrot.data.Mcollect
+import Mandelbrot.data.Mdata
 import groovyParallelPatterns.DataDetails
 import groovyParallelPatterns.ResultDetails
 import groovyParallelPatterns.cluster.connectors.NodeRequestingFanAny
@@ -11,7 +13,7 @@ import groovyParallelPatterns.terminals.Emit
 
 
 int cores = 4  // number of workers on each node
-int clusters = 3 // number of clusters
+int clusters = 5 // number of clusters
 int maxIterations = 1000 // escape value
 int width  = 5600                //1400   700        350
 

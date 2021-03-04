@@ -1,4 +1,4 @@
-package Mandelbrot
+package Mandelbrot.scripts
 import jcsp.lang.*
 import groovyJCSP.*
 import jcsp.net2.*
@@ -6,6 +6,8 @@ import jcsp.net2.mobile.*
 import jcsp.net2.tcpip.*
 import gppClusterBuilder.*
  
+import Mandelbrot.data.Mcollect
+import Mandelbrot.data.Mdata
 import groovyParallelPatterns.DataDetails
 import groovyParallelPatterns.ResultDetails
 import groovyParallelPatterns.cluster.connectors.NodeRequestingFanAny

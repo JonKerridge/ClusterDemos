@@ -1,4 +1,4 @@
-package Mandelbrot
+package Mandelbrot.data
 
 import jcsp.awt.DisplayList
 import jcsp.awt.GraphicsCommand

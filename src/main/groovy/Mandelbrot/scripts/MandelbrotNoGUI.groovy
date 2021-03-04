@@ -1,17 +1,16 @@
-package Mandelbrot
+package Mandelbrot.scripts
 
 import jcsp.lang.*
 import groovyJCSP.*
  
+import Mandelbrot.data.Mcollect
+import Mandelbrot.data.Mdata
 import groovyParallelPatterns.connectors.reducers.AnyFanOne
 import groovyParallelPatterns.connectors.spreaders.OneFanAny
 import groovyParallelPatterns.functionals.groups.AnyGroupAny
 import groovyParallelPatterns.terminals.Collect
 import groovyParallelPatterns.terminals.Emit
 import groovyParallelPatterns.*
- 
-import Mandelbrot.Mdata as md
-import Mandelbrot.Mcollect as mc
  
 
 int workers
@@ -34,15 +33,15 @@ System.gc()
 print "noGUI, $width, $maxIterations, $workers, "
 long startTime = System.currentTimeMillis()
  
-def emitDetails = new DataDetails(dName: md.getName(),
-dInitMethod: md.initialiseClass,
+def emitDetails = new DataDetails(dName: Mdata.getName(),
+dInitMethod: Mdata.initialiseClass,
 dInitData: [width, maxIterations],
-dCreateMethod: md.createInstance)
+dCreateMethod: Mdata.createInstance)
  
-def resultDetails = new ResultDetails(rName: mc.getName(),
-rInitMethod: mc.init,
-rCollectMethod: mc.collector,
-rFinaliseMethod: mc.finalise)
+def resultDetails = new ResultDetails(rName: Mcollect.getName(),
+rInitMethod: Mcollect.init,
+rCollectMethod: Mcollect.collector,
+rFinaliseMethod: Mcollect.finalise)
  
 
 //NETWORK
@@ -65,7 +64,7 @@ def spread = new OneFanAny(
 def group = new AnyGroupAny (
     inputAny: chan2.in(),
     outputAny: chan3.out(),
-    function: md.calculate,
+    function: Mdata.calculate,
     workers: workers)
  
 def reduce = new AnyFanOne (

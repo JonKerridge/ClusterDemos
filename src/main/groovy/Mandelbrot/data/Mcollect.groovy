@@ -1,4 +1,4 @@
-package Mandelbrot
+package Mandelbrot.data
 
 class Mcollect extends groovyParallelPatterns.DataClass {
 
