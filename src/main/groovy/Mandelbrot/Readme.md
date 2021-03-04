@@ -40,4 +40,13 @@ The run the jar artifact on each of the machines in the cluster.  Once all the n
 are running then the application will start automatically getting the Node 
 process and class files from the host machine automatically.
 
-YOUDO NOT HAVE TO COPY ANY FILES FROM THE HOST OTHER THAN THE JAR ARTIFACT THAT IS THE NODElOADER!
+YOU DO NOT HAVE TO COPY ANY FILES FROM THE HOST OTHER THAN THE JAR ARTIFACT THAT IS THE Nodeloader!
+
+As it happens, provided the Host node remains constant the NodeLoader process is 
+unaltered by the application, so once a machine has a copy of the NodeLoader process 
+there is no need to copy other versions as new applications are developed.
+
+A futher interface is provided in https://github.com/JonKerridge/gppTransform that contains a runnable jar file 
+that will allow you to select a file that has to be converted from a *.gpp or *.cgpp into either a single groovy file 
+or the collection of processes needed by the cluster based system. The interface comprises a file chooser 
+which allows the selection of a file *.gpp or *.cgpp, that will then be converted according to its file type.
