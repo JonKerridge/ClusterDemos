@@ -1,6 +1,6 @@
 package Mandelbrot.data
 
-class Mdata extends groovyParallelPatterns.DataClass{
+class Mdata extends groovy_parallel_patterns.DataClass{
 
   int []colour		  // array of colour values for this line
   double [][] line 	// array of [x,y] values for this line

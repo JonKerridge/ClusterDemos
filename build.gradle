@@ -7,19 +7,16 @@ group 'ClusterDemos'
 version '1.0.0'
 
 repositories {
-    mavenCentral()
     mavenLocal()
-    maven {
-        url "https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all"
-    }
+    mavenCentral()
 }
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:3.0.7'
-    compile 'cspforjava:jcsp:1.1.8'
-    compile 'groovyJCSP:groovyJCSP:1.1.8'
-    compile "groovyParallelPatterns:groovyParallelPatterns:1.1.11"
-    compile "gppBuilder:gppBuilder:1.1.11"
-    compile "gppClusterBuilder:gppClusterBuilder:1.1.0"
+    compile 'cspforjava:jcsp:1.1.9'
+    compile 'jonkerridge:groovy_jcsp:1.1.9'
+    compile "jonkerridge:groovy_parallel_patterns:1.1.12"
+    compile "jonkerridge:gpp_builder:1.1.12"
+    compile "jonkerridge:gpp_cluster_builder:1.1.0"
 }
 

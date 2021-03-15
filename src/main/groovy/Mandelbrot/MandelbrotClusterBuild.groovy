@@ -1,6 +1,6 @@
 package Mandelbrot
 
-import gppClusterBuilder.CGPPbuilder
+import gpp_cluster_builder.CGPPbuilder
 
 def builder = new CGPPbuilder()
 String fileRoot = "./scripts/"

@@ -1,4 +1,5 @@
-# ClusterDemos
+ClusterDemos
+
 Demontrations of gppClusterBuiler and groovyParallelPatterns library
 
 These demos have been used to check and then evaluate the use  of the 
@@ -39,7 +40,7 @@ will need to create a jar artifact that contains the NodeLoader process.
 
 This jar artifact will have to be copied to each of the machines in the cluster.
 Run the HostLoader code first, probably from your IDE.
-The run the jar artifact on each of the machines in the cluster.  Once all the nodes
+Then run the jar artifact on each of the machines in the cluster.  Once all the nodes
 are running then the application will start automatically getting the Node 
 process and class files from the host machine automatically.
 

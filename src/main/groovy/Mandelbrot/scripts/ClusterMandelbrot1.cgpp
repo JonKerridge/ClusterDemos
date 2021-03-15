@@ -2,14 +2,14 @@ package Mandelbrot.scripts
 
 import Mandelbrot.data.Mcollect
 import Mandelbrot.data.Mdata
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.cluster.connectors.NodeRequestingFanAny
-import groovyParallelPatterns.cluster.connectors.OneNodeRequestedList
-import groovyParallelPatterns.connectors.reducers.AnyFanOne
-import groovyParallelPatterns.functionals.groups.AnyGroupAny
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.Emit
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.cluster.connectors.NodeRequestingFanAny
+import groovy_parallel_patterns.cluster.connectors.OneNodeRequestedList
+import groovy_parallel_patterns.connectors.reducers.AnyFanOne
+import groovy_parallel_patterns.functionals.groups.AnyGroupAny
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.Emit
 
 
 int cores = 4  // number of workers on each node

@@ -6,7 +6,7 @@ import jcsp.awt.GraphicsCommand
 import java.awt.*
 import java.util.List
 
-class Mgui extends groovyParallelPatterns.DataClass {
+class Mgui extends groovy_parallel_patterns.DataClass {
 
   int width
   int height
