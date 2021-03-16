@@ -45,3 +45,71 @@ are running then the application will start automatically getting the Node
 process and class files from the host machine automatically.
 
 YOU DO NOT HAVE TO COPY ANY FILES FROM THE HOST OTHER THAN THE JAR ARTIFACT THAT IS THE NodeLoader!
+
+Please note this is a source file only and has to be built in your local environment.  
+
+The associated build.gradle file shows the repositories and dependencies required:
+<pre>
+repositories {
+    mavenCentral()
+    maven { // to download the jonkerridge.groovy_jcsp library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/groovyJCSP"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the cspforjava.jcsp library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/CSPforJAVA/jcsp"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the jonkerridge.groovy_parallel_patterns library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/GPP_Library"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the jonkerridge.gpp_builder library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/GPP_Builder"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the jonkerridge.gpp_cluster_builder library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/gppClusterBuilder"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:3.0.7'
+    compile 'cspforjava:jcsp:1.1.9'
+    compile 'jonkerridge:groovy_jcsp:1.1.9'
+    compile "jonkerridge:groovy_parallel_patterns:1.1.12"
+    compile "jonkerridge:gpp_builder:1.1.12"
+    compile "jonkerridge:gpp_cluster_builder:1.1.0"
+}
+</pre>
+
+In order to download Github Packages a user requires to have a Github Personal Access Token.  
+See https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+
+A gradle.properties file is required at the same directory level as the build.gradle file that contains
+
+<pre>
+gpr.user=userName
+gpr.key=userPersonalAccessToken
+</pre>

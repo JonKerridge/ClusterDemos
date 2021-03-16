@@ -7,8 +7,47 @@ group 'ClusterDemos'
 version '1.0.0'
 
 repositories {
-    mavenLocal()
     mavenCentral()
+    maven { // to download the jonkerridge.groovy_jcsp library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/groovyJCSP"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the cspforjava.jcsp library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/CSPforJAVA/jcsp"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the jonkerridge.groovy_parallel_patterns library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/GPP_Library"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the jonkerridge.gpp_builder library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/GPP_Builder"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
+    maven { // to download the jonkerridge.gpp_cluster_builder library
+        name = "GitHub"
+        url = "https://maven.pkg.github.com/JonKerridge/gppClusterBuilder"
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
 }
 
 dependencies {
